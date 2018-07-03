@@ -20,6 +20,7 @@ Node* Node::get(int n_id)
 {
 	Node* _parent = NULL;
 	Node* my_node = search(this, &_parent, n_id);
+	_parent = nullptr;
 
 	if(my_node && my_node->id == n_id) return my_node;
 
@@ -30,6 +31,7 @@ bool Node::push(int new_id)
 {
 	Node* _parent = NULL;
 	Node* last_node = search(this, &_parent, new_id);
+	_parent = nullptr;
 
 	if (last_node)
 	{
